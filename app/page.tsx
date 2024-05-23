@@ -1,13 +1,16 @@
 import Banner from '@components/home/Banner';
 import './globals.css';
-import TagList from '@components/home/TagList';
+import { ChildTagList, ParentTagList } from '@components/home/TagList';
 
 export default function Home() {
   return (
     <div className="w-full">
       <Banner />
       <div className="mt-20">
-        <TagList />
+        <ParentTagList />
+        <div className="py-10 px-36">
+          <ChildTagList />
+        </div>
       </div>
     </div>
   );

@@ -28,8 +28,8 @@ const SquareTag = ({ children, selected }: ITag) => {
     <div
       className={
         selected
-          ? 'rounded-2xl bg-mainblue text-white px-5 py-2'
-          : 'rounded-2xl border-solid border border-gray-300 px-5 py-2'
+          ? 'rounded-2xl bg-mainblue text-white px-5 py-2 flex gap-2 items-center text-2xl'
+          : 'rounded-2xl border-solid border border-gray-300 px-5 py-2 flex gap-2 items-center text-2xl'
       }
     >
       {children}

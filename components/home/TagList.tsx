@@ -15,7 +15,10 @@ const PARENT_CATEGORY = [
   },
   { icon: weatherIcon, text: '날씨' },
 ];
-const TagList = () => {
+
+const MEMBER_CATEGORY = ['유재석', '박명수', '정준하', '정형돈', '노홍철', '하하', '길'];
+
+export const ParentTagList = () => {
   return (
     <div className="flex gap-36 justify-center m-auto">
       {PARENT_CATEGORY.map((item) => (
@@ -27,4 +30,12 @@ const TagList = () => {
   );
 };
 
-export default TagList;
+export const ChildTagList = () => {
+  return (
+    <div className="flex gap-6">
+      {MEMBER_CATEGORY.map((item) => (
+        <Tag.Square>{item}</Tag.Square>
+      ))}
+    </div>
+  );
+};
