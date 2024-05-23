@@ -10,16 +10,18 @@ interface ISearchBar {
 
 type TSearchBarColor = 'white' | 'gray';
 
-const SearchBar = ({ placeholder, backgroundColor, width, height }: ISearchBar) => {
+const SearchBar = ({ placeholder, backgroundColor, width }: ISearchBar) => {
   const color = {
     white: 'bg-white',
     gray: 'bg-gray-200',
   };
 
   return (
-    <div className={`flex gap-3 ${color[backgroundColor]} w-${width} h-${height} rounded-2xl p-3`}>
-      <Image src={'icon/search.svg'} width={24} height={22} alt={'키워드 검색'} />
-      <input placeholder={placeholder} className={`${color[backgroundColor]} w-full`} />
+    <div
+      className={`flex gap-3 ${color[backgroundColor]} w-${width}  rounded-2xl p-5 justify-center items-center m-auto`}
+    >
+      <Image src={'icon/search.svg'} width={18} height={18} alt={'키워드 검색'} />
+      <input placeholder={placeholder} className={`${color[backgroundColor]} w-full text-xl `} />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Button from '@components/common/Button';
 import Profile from '@components/common/Profile';
+import mainLogo from '@public/icon/mudoew-logo.png';
 
 interface IHeader {
   background: boolean;
@@ -17,7 +18,7 @@ const Header = ({ background, isLoggedIn }: IHeader) => {
           : 'flex justify-between items-center w-full pb-3 '
       }
     >
-      <Image src={'icon/mudoew_logo.png'} width={60} height={60} alt={'메인 로고'} />
+      <Image src={mainLogo} width={60} height={60} alt={'메인 로고'} />
       {isLoggedIn ? (
         <Profile nickname={'Jullie'} backgroundColor={'mainblue'} size={'medium'} />
       ) : (
